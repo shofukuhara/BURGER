@@ -6,11 +6,12 @@ html(lang="ja")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(name="keywords", content="")
     meta(name="description", content="バーガーは、本格ハンバーガーショップです。アメリカで修行した店長。店内装飾も雰囲気たっぷりのアメリカンスタイルで、お食事を楽しんでいただけます。是非、ご来店ください。スタッフ一同心よりお待ちしております。")
+    link(rel="stylesheet", href="src/css/style.css")
     title BURGER
   body
-    header
+    header.header
       .header__logo
-        p.header__logo-title BURGER
+        img(src="src/img/logo.svg", alt="")
       ul.header__list
         - let headerlist = ['TOP', 'CONCEPT', 'MENU', 'NEWS', 'ACCESS']
           each item in headerlist
@@ -19,19 +20,18 @@ html(lang="ja")
       ul.header__sns
         - let headersns = ['insta', 'twitter', 'facebook']
           each sns in headersns
-              li.header__sns-item
-                a(href="#")
-                  img(src=`src/img/${sns}.png`, alt="")
+            li.header__sns-item
+              a(href="#")
+                img(src=`src/img/${sns}.png`, alt="")
     .content
       main
         .topbg
-          h1.topbg__catch BURGER
-        section.concept
+        section.concept.wrapper
           h2.concept__sectitle CONCEPT
           .concept__imgbox
             img(src="src/img/top_concept.jpg", alt="")
           .concept__textbox
-            p.concept__text バーガーは、本格ハンバーガーショップです。アメリカで修行した店長。
+            p.concept__textbox-text バーガーは、本格ハンバーガーショップです。アメリカで修行した店長。
               br
               | 店内装飾も雰囲気たっぷりのアメリカンスタイルで、お食事を楽しんでいただけます。
               br
@@ -43,17 +43,19 @@ html(lang="ja")
               li(class="menu__list-item")
                 a(href="#") 
                   img(src=`src/img/top_menu_${i + 1}.jpg`)
-          a(href="" class="btn") 全てのメニューを見る
+          .box
+            a(href="#" class="btn") 全てのメニューを見る
         .bg
         section.news
           h2.news__sectitle NEWS
-          .wrapper
-            ul.news__list
+          .news__box
+            ul.news__list.wrapper
               - for (var i = 0; i < 3; i++)
                 li(class="news__list-item")
                   a(href="#") 
                     img(src=`src/img/top_news_${i + 1}.jpg`)
-          a(href="" class="btn") 全てのニュースを見る
+          .box
+            a(href="" class="btn") 全てのニュースを見る
         section.access
           h2.access__sectitle ACCESS
           .access__box
@@ -66,3 +68,6 @@ html(lang="ja")
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12967.0806533878!2d139.7016358!3d35.6580339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1660116901029!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       footer
         <p class="copy">&copy; 2022 BURGER</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
