@@ -12,18 +12,24 @@
   <body>
     <header class="header">
       <div class="header__logo"><img src="src/img/logo.svg" alt=""></div>
-      <ul class="header__list">
-        <li class="header__list-item"><a class="header__list-link" href="#">TOP</a></li>
-        <li class="header__list-item"><a class="header__list-link" href="#">CONCEPT</a></li>
-        <li class="header__list-item"><a class="header__list-link" href="#">MENU</a></li>
-        <li class="header__list-item"><a class="header__list-link" href="#">NEWS</a></li>
-        <li class="header__list-item"><a class="header__list-link" href="#">ACCESS</a></li>
-      </ul>
-      <ul class="header__sns">
-        <li class="header__sns-item"><a href="#"><img src="src/img/insta.png" alt=""></a></li>
-        <li class="header__sns-item"><a href="#"><img src="src/img/twitter.png" alt=""></a></li>
-        <li class="header__sns-item"><a href="#"><img src="src/img/facebook.png" alt=""></a></li>
-      </ul>
+      <div class="header__hamburger"><span class="header__hamburger-line"></span><span class="header__hamburger-line"></span><span class="header__hamburger-line"></span>
+      </div>
+      <div class="header__inner">
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__list-item"><a class="header__list-link" href="#">TOP</a></li>
+            <li class="header__list-item"><a class="header__list-link" href="#">CONCEPT</a></li>
+            <li class="header__list-item"><a class="header__list-link" href="#">MENU</a></li>
+            <li class="header__list-item"><a class="header__list-link" href="#">NEWS</a></li>
+            <li class="header__list-item"><a class="header__list-link" href="#">ACCESS</a></li>
+          </ul>
+          <ul class="header__sns">
+            <li class="header__sns-item"><a href="#"><img src="src/img/insta.png" alt=""></a></li>
+            <li class="header__sns-item"><a href="#"><img src="src/img/twitter.png" alt=""></a></li>
+            <li class="header__sns-item"><a href="#"><img src="src/img/facebook.png" alt=""></a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <div class="content">
       <main>
@@ -49,29 +55,32 @@
           <h2 class="news__sectitle">NEWS</h2>
           <div class="news__box">
             <ul class="news__list wrapper">
-              <li class="news__list-item"><a href="#"> <img src="src/img/top_news_1.jpg"></a></li>
-              <li class="news__list-item"><a href="#"> <img src="src/img/top_news_2.jpg"></a></li>
-              <li class="news__list-item"><a href="#"> <img src="src/img/top_news_3.jpg"></a></li>
+              <li class="news__list-item"><a class="news__list-link" href="#"><img src="src/img/top_news_1.jpg" alt=""><span class="news__list-date">2022.09.02</span><span class="news__list-text">テキストテキスト</span></a></li>
+              <li class="news__list-item"><a class="news__list-link" href="#"><img src="src/img/top_news_2.jpg" alt=""><span class="news__list-date">2022.09.10</span><span class="news__list-text">テキストテキスト</span></a></li>
+              <li class="news__list-item"><a class="news__list-link" href="#"><img src="src/img/top_news_3.jpg" alt=""><span class="news__list-date">2022.09.23</span><span class="news__list-text">テキストテキスト</span></a></li>
             </ul>
           </div>
           <div class="box"><a class="btn" href="">全てのニュースを見る</a></div>
         </section>
         <section class="access">
-          <h2 class="access__sectitle">ACCESS</h2>
-          <div class="access__box">
-            <ul class="access__list">
-              <li class="access__list-item">〒000-0000 東京都○○○○○</li>
-              <li class="access__list-item">EAT IN / 11:00〜20:00(L.O. 19:00)</li>
-              <li class="access__list-item">TAKE OUT / 11:00〜21:00</li>
-              <li class="access__list-item">Uber Eats / 11:00〜21:00</li>
-              <li class="access__list-item">TEL 00-0000-0000</li>
-            </ul><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12967.0806533878!2d139.7016358!3d35.6580339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1660116901029!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="access__content wrapper">
+            <div class="access__textbox">
+              <h2 class="access__sectitle">ACCESS</h2>
+              <ul class="access__list">
+                <li class="access__list-item">〒000-0000 東京都○○○○○</li>
+                <li class="access__list-item">EAT IN / 11:00〜20:00(L.O. 19:00)</li>
+                <li class="access__list-item">TAKE OUT / 11:00〜21:00</li>
+                <li class="access__list-item">Uber Eats / 11:00〜21:00</li>
+                <li class="access__list-item">TEL 00-0000-0000</li>
+              </ul>
+            </div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12967.0806533878!2d139.7016358!3d35.6580339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1660116901029!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </section>
       </main>
-      <footer><p class="copy">&copy; 2022 BURGER</p></footer>
+      <footer class="footer"><p class="footer__copy">&copy; 2022 BURGER</p></footer>
     </div>
   </body><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="src/js/main.js"> </script>
 </html>

@@ -12,17 +12,22 @@ html(lang="ja")
     header.header
       .header__logo
         img(src="src/img/logo.svg", alt="")
-      ul.header__list
-        - let headerlist = ['TOP', 'CONCEPT', 'MENU', 'NEWS', 'ACCESS']
-          each item in headerlist
-            li.header__list-item
-              a(href="#" class="header__list-link") #{item}
-      ul.header__sns
-        - let headersns = ['insta', 'twitter', 'facebook']
-          each sns in headersns
-            li.header__sns-item
-              a(href="#")
-                img(src=`src/img/${sns}.png`, alt="")
+      .header__hamburger
+        - for (let x = 0; x < 3; x++)
+          span.header__hamburger-line
+      .header__inner
+        nav.header__nav
+          ul.header__list
+            - let headerlist = ['TOP', 'CONCEPT', 'MENU', 'NEWS', 'ACCESS']
+              each item in headerlist
+                li.header__list-item
+                  a(href="#" class="header__list-link") #{item}
+          ul.header__sns
+            - let headersns = ['insta', 'twitter', 'facebook']
+              each sns in headersns
+                li.header__sns-item
+                  a(href="#")
+                    img(src=`src/img/${sns}.png`, alt="")
     .content
       main
         .topbg
@@ -50,24 +55,37 @@ html(lang="ja")
           h2.news__sectitle NEWS
           .news__box
             ul.news__list.wrapper
-              - for (var i = 0; i < 3; i++)
-                li(class="news__list-item")
-                  a(href="#") 
-                    img(src=`src/img/top_news_${i + 1}.jpg`)
+              li.news__list-item
+                a(href="#" class="news__list-link")
+                  img(src="src/img/top_news_1.jpg", alt="")
+                  span.news__list-date 2022.09.02
+                  span.news__list-text テキストテキスト
+              li.news__list-item
+                a(href="#" class="news__list-link")
+                  img(src="src/img/top_news_2.jpg", alt="")
+                  span.news__list-date 2022.09.10
+                  span.news__list-text テキストテキスト
+              li.news__list-item
+                a(href="#" class="news__list-link")
+                  img(src="src/img/top_news_3.jpg", alt="")
+                  span.news__list-date 2022.09.23
+                  span.news__list-text テキストテキスト
           .box
             a(href="" class="btn") 全てのニュースを見る
         section.access
-          h2.access__sectitle ACCESS
-          .access__box
-            ul.access__list
-              li.access__list-item 〒000-0000 東京都○○○○○
-              li.access__list-item EAT IN / 11:00〜20:00(L.O. 19:00)
-              li.access__list-item TAKE OUT / 11:00〜21:00
-              li.access__list-item Uber Eats / 11:00〜21:00
-              li.access__list-item TEL 00-0000-0000
+          .access__content.wrapper
+            .access__textbox
+              h2.access__sectitle ACCESS
+              ul.access__list
+                li.access__list-item 〒000-0000 東京都○○○○○
+                li.access__list-item EAT IN / 11:00〜20:00(L.O. 19:00)
+                li.access__list-item TAKE OUT / 11:00〜21:00
+                li.access__list-item Uber Eats / 11:00〜21:00
+                li.access__list-item TEL 00-0000-0000
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12967.0806533878!2d139.7016358!3d35.6580339!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1660116901029!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      footer
-        <p class="copy">&copy; 2022 BURGER</p>
+      footer.footer
+        <p class="footer__copy">&copy; 2022 BURGER</p>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  script(src="src/js/main.js") 
