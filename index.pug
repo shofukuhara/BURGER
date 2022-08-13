@@ -34,12 +34,16 @@ html(lang="ja")
         section.concept.wrapper
           h2.concept__sectitle CONCEPT
           .concept__imgbox
-            img(src="src/img/top_concept.jpg", alt="")
+            picture
+              source(media="(min-width: 1025px)", srcset="src/img/top_concept.jpg")
+              source(media="(min-width: 600px) and (max-width: 1025px)", srcset="src/img/top_concept.jpg")
+              source(media="(max-width: 599px)", srcset="src/img/top_concept_sp.jpg")
+              img(src="src/img/top_concept.jpg", alt="")
           .concept__textbox
             p.concept__textbox-text バーガーは、本格ハンバーガーショップです。アメリカで修行した店長。
-              br
+              br.sp
               | 店内装飾も雰囲気たっぷりのアメリカンスタイルで、お食事を楽しんでいただけます。
-              br
+              br.sp
               | 是非、ご来店ください。スタッフ一同心よりお待ちしております。
         section.menu
           h2.menu__sectitle MENU

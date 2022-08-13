@@ -10,13 +10,13 @@ body {
   @include m.mq('sp') {
     font-family: 'Noto Serif JP', serif;
     background-color: v.$bg;
-    font-size: 1.6rem;
+    font-size: v.$FontSpText;
     line-height: 1.6;
   }
   @include m.mq('tab') {
     font-family: 'Noto Serif JP', serif;
     background-color: v.$bg;
-    font-size: 1.6rem;
+    font-size: v.$FontTabText;
     line-height: 1.6;
   }
   @include m.mq('pc') {
@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     font-family: 'Noto Serif JP', serif;
     background-color: v.$bg;
-    font-size: 1.6rem;
+    font-size: v.$FontPcText;
     line-height: 1.6;
   }
 }
@@ -44,6 +44,17 @@ body {
   }
 }
 
+.sp {
+  @include m.mq('sp') {
+    display: none;
+  }
+  @include m.mq('tab') {
+    display: block;
+  }
+  @include m.mq('pc') {
+    display: block;
+  }
+}
 .box {
   @include m.mq('sp') {
     text-align: center;
@@ -474,7 +485,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-bottom: 160px;
+    margin-bottom: 120px;
   }
   @include m.mq('tab') {
     background-image: url(/src/img/top_main.png);
@@ -496,10 +507,10 @@ body {
 
 .concept {
   @include m.mq('sp') {
-    margin-bottom: 160px;
+    margin-bottom: 120px;
     &__sectitle {
       text-align: center;
-      @include m.Tabsectitle;
+      @include m.Spsectitle;
     }
     &__imgbox {
       margin-bottom: 40px;
@@ -509,8 +520,7 @@ body {
     }
     &__textbox {
       &-text {
-        text-align: center;
-        font-size: 1.8rem;
+        font-size: calc(1.6rem + 4 * (100vw - 320px) / 379);
       }
     }
   }
@@ -556,10 +566,10 @@ body {
 
 .menu {
   @include m.mq('sp') {
-    margin-bottom: 160px;
+    margin-bottom: 120px;
     &__sectitle {
       text-align: center;
-      @include m.Tabsectitle;
+      @include m.Spsectitle;
     }
     &__list {
       width: 86%;
@@ -651,7 +661,7 @@ body {
     margin-bottom: 160px;
     &__sectitle {
       text-align: center;
-      @include m.Pcsectitle;
+      @include m.Spsectitle;
     }
     &__box {
       background-color: #ECDED2;
@@ -682,7 +692,7 @@ body {
     margin-bottom: 160px;
     &__sectitle {
       text-align: center;
-      @include m.Pcsectitle;
+      @include m.Tabsectitle;
     }
     &__box {
       background-color: #ECDED2;
@@ -754,15 +764,15 @@ body {
       margin-bottom: 40px;
     }
     &__list {
-      font-size: 2rem
+      font-size: calc(1.6rem + 4 * (100vw - 320px) / 379);
     }
     &__sectitle {
-      @include m.Pcsectitle;
+      @include m.Spsectitle;
       margin-bottom: 40px;
     }
     iframe {
       width: 100%;
-      height: 500px;
+      height: 300px;
     }
   }
   @include m.mq('tab') {
@@ -777,7 +787,7 @@ body {
       font-size: 2rem
     }
     &__sectitle {
-      @include m.Pcsectitle;
+      @include m.Tabsectitle;
       margin-bottom: 40px;
     }
     iframe {

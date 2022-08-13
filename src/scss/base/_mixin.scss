@@ -19,3 +19,8 @@ $breakpoint: (
   font-size: 3rem;
   margin-bottom: 80px;
 }
+
+@mixin Spsectitle {
+  font-size: calc(3rem + 4 * (100vw - 320px) / 379);
+  margin-bottom: 80px;
+}
