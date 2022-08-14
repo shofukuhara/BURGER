@@ -1,0 +1,29 @@
+@use "../base/variable" as v;
+@use "../base/mixin" as m;
+
+.footer {
+  @include m.mq('sp') {
+    background-color: v.$red;
+    &__copy {
+      text-align: center;
+      padding: 10px 0;
+      color: v.$wh;
+    }
+  }
+  @include m.mq('tab') {
+    background-color: v.$red;
+    &__copy {
+      text-align: center;
+      padding: 10px 0;
+      color: v.$wh;
+    }
+  }
+  @include m.mq('pc') {
+    background-color: v.$red;
+    &__copy {
+      text-align: center;
+      padding: 10px 0;
+      color: v.$wh;
+    }
+  }
+}

@@ -1,0 +1,451 @@
+@use "../base/reset";
+@use "../base/mixin" as m;
+@use "../base/variable" as v;
+@use "../layout/header" ;
+@use "../layout/footer";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include m.mq('sp') {
+    font-family: 'Noto Serif JP', serif;
+    background-color: v.$bg;
+    font-size: v.$FontSpText;
+    line-height: 1.6;
+  }
+  @include m.mq('tab') {
+    font-family: 'Noto Serif JP', serif;
+    background-color: v.$bg;
+    font-size: v.$FontTabText;
+    line-height: 1.6;
+  }
+  @include m.mq('pc') {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Serif JP', serif;
+    background-color: v.$bg;
+    font-size: v.$FontPcText;
+    line-height: 1.6;
+  }
+}
+
+.wrapper {
+  @include m.mq('sp') {
+    width: 86%;
+    margin: 0 auto;
+  }
+  @include m.mq('tab') {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @include m.mq('pc') {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.sp {
+  @include m.mq('sp') {
+    display: none;
+  }
+  @include m.mq('tab') {
+    display: block;
+  }
+  @include m.mq('pc') {
+    display: block;
+  }
+}
+.box {
+  @include m.mq('sp') {
+    text-align: center;
+  }
+  @include m.mq('tab') {
+    text-align: center;
+  }
+  @include m.mq('pc') {
+    text-align: center;
+  }
+  .btn {
+    @include m.mq('sp') {
+      display: inline-block;
+      width: 60%;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 40px;
+      background: v.$red;
+      color: v.$wh;
+    }
+    @include m.mq('tab') {
+      display: inline-block;
+      width: 240px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 40px;
+      background: v.$red;
+      color: v.$wh;
+    }
+    @include m.mq('pc') {
+      display: inline-block;
+      width: 300px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 40px;
+      background: v.$red;
+      color: v.$wh;
+    }
+  }
+}
+
+
+
+.content {
+  @include m.mq('sp') {
+  }
+  @include m.mq('tab') {
+  }
+  @include m.mq('pc') {
+    width: 80%;
+    margin-left: auto;
+  }
+}
+.topbg {
+  @include m.mq('sp') {
+    background-image: url(/src/img/top_main_sp.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 120px;
+  }
+  @include m.mq('tab') {
+    background-image: url(/src/img/top_main.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 160px;
+  }
+  @include m.mq('pc') {
+    background-image: url(/src/img/top_main.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 160px;
+  }
+}
+
+.concept {
+  @include m.mq('sp') {
+    margin-bottom: 120px;
+    &__sectitle {
+      text-align: center;
+      @include m.Spsectitle;
+    }
+    &__imgbox {
+      margin-bottom: 40px;
+      img {
+        width: 100%;
+      }
+    }
+    &__textbox {
+      &-text {
+        font-size: calc(1.6rem + 4 * (100vw - 320px) / 379);
+      }
+    }
+  }
+  @include m.mq('tab') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Tabsectitle;
+    }
+    &__imgbox {
+      margin-bottom: 40px;
+      img {
+        width: 100%;
+      }
+    }
+    &__textbox {
+      &-text {
+        text-align: center;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  @include m.mq('pc') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Pcsectitle;
+    }
+    &__imgbox {
+      margin-bottom: 40px;
+      img {
+        width: 100%;
+      }
+    }
+    &__textbox {
+      &-text {
+        text-align: center;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.menu {
+  @include m.mq('sp') {
+    margin-bottom: 120px;
+    &__sectitle {
+      text-align: center;
+      @include m.Spsectitle;
+    }
+    &__list {
+      width: 86%;
+      margin: 0 auto;
+      margin-bottom: 80px;
+      &-item {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include m.mq('tab') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Tabsectitle;
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 80px;
+      &-item {
+        width: 33%;
+        text-align: center;
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+  @include m.mq('pc') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Pcsectitle;
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 80px;
+      &-item {
+        width: 33%;
+        text-align: center;
+        img {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+.bg {
+  @include m.mq('sp') {
+    background-image: url(/src/img/top_bg_sp.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin-bottom: 120px;
+    background-attachment: fixed;
+  }
+  @include m.mq('tab') {
+    background-image: url(/src/img/top_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-bottom: 120px;
+    background-attachment: fixed;
+  }
+  @include m.mq('pc') {
+    background-image: url(/src/img/top_bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-bottom: 120px;
+    background-attachment: fixed;
+  }
+  
+}
+
+.news {
+  @include m.mq('sp') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Spsectitle;
+    }
+    &__box {
+      background-color: #ECDED2;
+    }
+    &__list {
+      padding: 60px 0;
+      margin-bottom: 80px;
+      &-item {
+        width: 100%;
+        margin-bottom: 40px;
+        img {
+          width: 100%;
+        }
+      }
+      &-date {
+        display: block;
+        color: v.$bl;
+        margin: 6px 0;
+      }
+      &-text {
+        display: block;
+        color: v.$bl;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  @include m.mq('tab') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Tabsectitle;
+    }
+    &__box {
+      background-color: #ECDED2;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px 0;
+      margin-bottom: 80px;
+      &-item {
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+      &-date {
+        display: block;
+        color: v.$bl;
+        margin: 6px 0;
+      }
+      &-text {
+        display: block;
+        color: v.$bl;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  @include m.mq('pc') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Pcsectitle;
+    }
+    &__box {
+      background-color: #ECDED2;
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px 0;
+      margin-bottom: 80px;
+      &-item {
+        width: 30%;
+        img {
+          width: 100%;
+        }
+      }
+      &-date {
+        display: block;
+        color: v.$bl;
+        margin: 6px 0;
+      }
+      &-text {
+        display: block;
+        color: v.$bl;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.access {
+  @include m.mq('sp') {
+    margin-bottom: 80px;
+    &__content {
+    }
+    &__textbox {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    &__list {
+      font-size: calc(1.6rem + 4 * (100vw - 320px) / 379);
+    }
+    &__sectitle {
+      @include m.Spsectitle;
+      margin-bottom: 40px;
+    }
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  @include m.mq('tab') {
+    margin-bottom: 80px;
+    &__content {
+    }
+    &__textbox {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    &__list {
+      font-size: 2rem
+    }
+    &__sectitle {
+      @include m.Tabsectitle;
+      margin-bottom: 40px;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+    }
+  }
+  @include m.mq('pc') {
+    margin-bottom: 160px;
+    &__content {
+      display: flex;
+      align-items: center;
+    }
+    &__textbox {
+      width: 50%;
+    }
+    &__list {
+      font-size: 2rem
+    }
+    &__sectitle {
+      @include m.Pcsectitle;
+      margin-bottom: 40px;
+    }
+    iframe {
+      width: 600px;
+      height: 300px;
+    }
+  }
+}

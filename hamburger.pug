@@ -1,0 +1,61 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords", content="")
+    meta(name="description", content="バーガーは、本格ハンバーガーショップです。アメリカで修行した店長。店内装飾も雰囲気たっぷりのアメリカンスタイルで、お食事を楽しんでいただけます。是非、ご来店ください。スタッフ一同心よりお待ちしております。")
+    link(rel="stylesheet", href="src/css/hamburger.css")
+    title BURGER | HAMBURGER
+  body
+    header.header
+      .header__logo
+        img(src="src/img/logo.svg", alt="")
+      .header__hamburger
+        - for (let x = 0; x < 3; x++)
+          span.header__hamburger-line
+      .header__inner
+        nav.header__nav
+          ul.header__list
+            - let headerlist = ['TOP', 'CONCEPT', 'MENU', 'NEWS', 'ACCESS']
+              each item in headerlist
+                li.header__list-item
+                  a(href="#" class="header__list-link") #{item}
+          ul.header__sns
+            - let headersns = ['insta', 'twitter', 'facebook']
+              each sns in headersns
+                li.header__sns-item
+                  a(href="#")
+                    img(src=`src/img/${sns}.png`, alt="")
+    .content
+      main
+        .topbg
+        section.hamburger
+          h2.hamburger__sectitle HAMBURGER
+          .hamburger__box
+            ul.hamburger__list.wrapper
+              li.hamburger__list-item
+                img(src="src/img/hamburger_01.jpg", alt="")
+                span.hamburger__list-text ハンバーガー01
+              li.hamburger__list-item
+                img(src="src/img/hamburger_02.jpg", alt="")
+                span.hamburger__list-text ハンバーガー02
+              li.hamburger__list-item
+                img(src="src/img/hamburger_03.jpg", alt="")
+                span.hamburger__list-text ハンバーガー03
+              li.hamburger__list-item
+                img(src="src/img/hamburger_04.jpg", alt="")
+                span.hamburger__list-text ハンバーガー04
+              li.hamburger__list-item
+                img(src="src/img/hamburger_05.jpg", alt="")
+                span.hamburger__list-text ハンバーガー05
+              li.hamburger__list-item
+                img(src="src/img/hamburger_06.jpg", alt="")
+                span.hamburger__list-text ハンバーガー06
+      footer.footer
+        <p class="footer__copy">&copy; 2022 BURGER</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  script(src="src/js/main.js") 
