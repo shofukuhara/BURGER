@@ -1,0 +1,65 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords", content="")
+    meta(name="description", content="バーガーは、本格ハンバーガーショップです。アメリカで修行した店長。店内装飾も雰囲気たっぷりのアメリカンスタイルで、お食事を楽しんでいただけます。是非、ご来店ください。スタッフ一同心よりお待ちしております。")
+    link(rel="stylesheet", href="src/css/dri&des.css")
+    title BURGER | HAMBURGER
+  body
+    header.header
+      .header__logo
+        img(src="src/img/logo.svg", alt="")
+      .header__hamburger
+        - for (let x = 0; x < 3; x++)
+          span.header__hamburger-line
+      .header__inner
+        nav.header__nav
+          ul.header__list
+            - let headerlist = ['TOP', 'CONCEPT', 'MENU', 'NEWS', 'ACCESS']
+              each item in headerlist
+                li.header__list-item
+                  a(href="#" class="header__list-link") #{item}
+          ul.header__sns
+            - let headersns = ['insta', 'twitter', 'facebook']
+              each sns in headersns
+                li.header__sns-item
+                  a(href="#")
+                    img(src=`src/img/${sns}.png`, alt="")
+    .content
+      main
+        .topbg
+        section.drink
+          h2.drink__sectitle DRINK
+          .drink__box
+            ul.drink__list.wrapper
+              li.drink__list-item
+                img(src="src/img/drink_01.jpg", alt="")
+                span.drink__list-text ドリンク01
+              li.drink__list-item
+                img(src="src/img/drink_02.jpg", alt="")
+                span.drink__list-text ドリンク02
+              li.drink__list-item
+                img(src="src/img/drink_03.jpg", alt="")
+                span.drink__list-text ドリンク03
+        section.dessert
+          h2.dessert__sectitle DESSERT
+          .dessert__box
+            ul.dessert__list.wrapper
+              li.dessert__list-item
+                img(src="src/img/dessert_01.jpg", alt="")
+                span.dessert__list-text ドリンク01
+              li.dessert__list-item
+                img(src="src/img/dessert_02.jpg", alt="")
+                span.dessert__list-text ドリンク02
+              li.dessert__list-item
+                img(src="src/img/dessert_03.jpg", alt="")
+                span.dessert__list-text ドリンク03
+      footer.footer
+        <p class="footer__copy">&copy; 2022 BURGER</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  script(src="src/js/main.js") 
