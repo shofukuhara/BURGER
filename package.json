@@ -9,8 +9,10 @@
     "autoprefixer": "9.8.6",
     "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
+    "gulp-html-beautify": "^1.0.1",
     "gulp-load-plugins": "^2.0.7",
     "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "sass": "^1.54.4"

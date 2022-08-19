@@ -6,6 +6,15 @@ const autoprefixer = require("autoprefixer");
 const browserSync = require("browser-sync");
 const server = browserSync.create();
 
+const pug = require("gulp-pug");
+const html = require("gulp-html-beautify");
+
+function pugCompile() {
+  return src("./src/pug/*.pug")
+  .pipe(pug())
+  .pipe(dest("./dist/html"));
+}
+
 function style() {
   return src("./src/sass/pages/*.scss")
     .pipe($.sourcemaps.init())
@@ -18,11 +27,14 @@ function style() {
 function serve() {
   server.init({
     server: {
-      baseDir: "./dist",
+      baseDir: "./",
     },
+    startPath: "top.html",
   });
-  watch("./src/sass/pages/*.scss", style);
-  watch("./src/sass/pages/*.scss").on("change", server.reload);
+  watch("./src/sass/**/*.scss", style);
+  watch("./src/sass/**/*.scss").on("change", server.reload);
 }
+
+exports.pug = pug;
 exports.style = style;
 exports.serve = serve;
