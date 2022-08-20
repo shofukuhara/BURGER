@@ -6,12 +6,12 @@ html(lang="ja")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(name="keywords", content="")
     meta(name="description", content="バーガーは、本格ハンバーガーショップです。アメリカで修行した店長。店内装飾も雰囲気たっぷりのアメリカンスタイルで、お食事を楽しんでいただけます。是非、ご来店ください。スタッフ一同心よりお待ちしております。")
-    link(rel="stylesheet", href="src/css/style.css")
+    link(rel="stylesheet", href="../css/top.css")
     title BURGER
   body
     header.header
       .header__logo
-        img(src="src/img/logo.svg", alt="")
+        img(src="../img/logo.svg", alt="")
       .header__hamburger
         - for (let x = 0; x < 3; x++)
           span.header__hamburger-line
@@ -27,7 +27,7 @@ html(lang="ja")
               each sns in headersns
                 li.header__sns-item
                   a(href="#")
-                    img(src=`src/img/${sns}.png`, alt="")
+                    img(src=`../img/${sns}.png`, alt="")
     .content
       main
         .topbg
@@ -35,10 +35,10 @@ html(lang="ja")
           h2.concept__sectitle CONCEPT
           .concept__imgbox
             picture
-              source(media="(min-width: 1025px)", srcset="src/img/top_concept.jpg")
-              source(media="(min-width: 600px) and (max-width: 1025px)", srcset="src/img/top_concept.jpg")
-              source(media="(max-width: 599px)", srcset="src/img/top_concept_sp.jpg")
-              img(src="src/img/top_concept.jpg", alt="")
+              source(media="(min-width: 1025px)", srcset="../img/top_concept.jpg")
+              source(media="(min-width: 600px) and (max-width: 1025px)", srcset="../img/top_concept.jpg")
+              source(media="(max-width: 599px)", srcset="../img/top_concept_sp.jpg")
+              img(src="../img/top_concept.jpg", alt="")
           .concept__textbox
             p.concept__textbox-text バーガーは、本格ハンバーガーショップです。アメリカで修行した店長。
               br.sp
@@ -51,7 +51,7 @@ html(lang="ja")
             - for (var i = 0; i < 3; i++)
               li(class="menu__list-item")
                 a(href="#") 
-                  img(src=`src/img/top_menu_${i + 1}.jpg`)
+                  img(src=`../img/top_menu_${i + 1}.jpg`)
           .box
             a(href="#" class="btn") 全てのメニューを見る
         .bg
@@ -61,17 +61,17 @@ html(lang="ja")
             ul.news__list.wrapper
               li.news__list-item
                 a(href="#" class="news__list-link")
-                  img(src="src/img/top_news_1.jpg", alt="")
+                  img(src="../img/top_news_1.jpg", alt="")
                   span.news__list-date 2022.09.02
                   span.news__list-text テキストテキスト
               li.news__list-item
                 a(href="#" class="news__list-link")
-                  img(src="src/img/top_news_2.jpg", alt="")
+                  img(src="../img/top_news_2.jpg", alt="")
                   span.news__list-date 2022.09.10
                   span.news__list-text テキストテキスト
               li.news__list-item
                 a(href="#" class="news__list-link")
-                  img(src="src/img/top_news_3.jpg", alt="")
+                  img(src="../img/top_news_3.jpg", alt="")
                   span.news__list-date 2022.09.23
                   span.news__list-text テキストテキスト
           .box
@@ -92,4 +92,4 @@ html(lang="ja")
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  script(src="src/js/main.js") 
+  script(src="../js/main.js") 

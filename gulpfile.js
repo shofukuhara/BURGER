@@ -11,8 +11,18 @@ const html = require("gulp-html-beautify");
 
 function pugCompile() {
   return src("./src/pug/*.pug")
-  .pipe(pug())
-  .pipe(dest("./dist/html"));
+    .pipe(pug())
+    .pipe(
+      html({
+        indent_size: 2,
+        indent_char: " ",
+        max_preserve_newlines: 0,
+        preserve_newlines: false,
+        extra_liners: [],
+      })
+    )
+    .pipe(dest("./dist/html"))
+    .pipe(dest("./src/html"));
 }
 
 function style() {
@@ -21,7 +31,8 @@ function style() {
     .pipe(sass())
     .pipe($.postcss([autoprefixer()]))
     .pipe($.sourcemaps.write("."))
-    .pipe(dest("./dist/css"));
+    .pipe(dest("./dist/css"))
+    .pipe(dest("./src/css"));
 }
 
 function serve() {
@@ -29,12 +40,14 @@ function serve() {
     server: {
       baseDir: "./",
     },
-    startPath: "top.html",
+    startPath: "./src/html/top.html",
   });
   watch("./src/sass/**/*.scss", style);
   watch("./src/sass/**/*.scss").on("change", server.reload);
+  watch("./src/pug/**/*.pug", pugCompile);
+  watch("./src/pug/**/*.pug").on("change", server.reload);
 }
 
-exports.pug = pug;
+exports.pug = pugCompile;
 exports.style = style;
 exports.serve = serve;
