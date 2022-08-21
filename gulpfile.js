@@ -5,9 +5,13 @@ const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("autoprefixer");
 const browserSync = require("browser-sync");
 const server = browserSync.create();
-
+const image = require("gulp-imagemin");
 const pug = require("gulp-pug");
 const html = require("gulp-html-beautify");
+
+function imgMin() {
+  return src("./src/img/**").pipe($.imagemin()).pipe(dest("./dist/img"));
+}
 
 function pugCompile() {
   return src("./src/pug/*.pug")
@@ -48,6 +52,7 @@ function serve() {
   watch("./src/pug/**/*.pug").on("change", server.reload);
 }
 
+exports.image = imgMin;
 exports.pug = pugCompile;
 exports.style = style;
 exports.serve = serve;
