@@ -1,6 +1,6 @@
 $breakpoint: (
   'sp': 'screen and (max-width: 599px)',
-  'tab': 'screen and (min-width: 600px) and (max-width: 1025px)',
+  'tab': 'screen and (min-width: 600px) and (max-width: 1024px)',
   'pc': 'screen and (min-width: 1025px)'
 );
 
@@ -22,5 +22,5 @@ $breakpoint: (
 
 @mixin Spsectitle {
   font-size: calc(3rem + 4 * (100vw - 320px) / 379);
-  margin-bottom: 80px;
+  margin-bottom: 54px;
 }

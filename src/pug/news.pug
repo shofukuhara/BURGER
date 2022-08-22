@@ -18,10 +18,16 @@ html(lang="ja")
       .header__inner
         nav.header__nav
           ul.header__list
-            - let headerlist = ['TOP', 'CONCEPT', 'MENU', 'NEWS', 'ACCESS']
-              each item in headerlist
-                li.header__list-item
-                  a(href="#" class="header__list-link") #{item}
+            li.header__list-item
+              a(href="#" class="header__list-link") TOP
+            li.header__list-item
+              a(href="#concept" class="header__list-link") CONCEPT
+            li.header__list-item
+              a(href="#" class="header__list-link") MENU
+            li.header__list-item
+              a(href="#" class="header__list-link") NEWS
+            li.header__list-item
+              a(href="#access" class="header__list-link") ACCESS
           ul.header__sns
             - let headersns = ['insta', 'twitter', 'facebook']
               each sns in headersns
@@ -35,41 +41,47 @@ html(lang="ja")
           h2.news__sectitle NEWS
           .wrapper
             dl.news__dl
-              dt.news__dt
-                img(src="../img/top_news_1.jpg", alt="")
-              dd.news__dd
-                span.news__dd-text テキストテキストテキストテキスト
-                span.news__dd-date 2022.08.01
+              a(href="#" class="news__box")
+                dt.news__dt
+                  img(src="../img/top_news_1.jpg", alt="")
+                dd.news__dd
+                  span.news__dd-text テキストテキストテキストテキストテキストテキスト
+                  span.news__dd-date 2022.08.01
             dl.news__dl
-              dt.news__dt
-                img(src="../img/top_news_2.jpg", alt="")
-              dd.news__dd
-                span.news__dd-text テキストテキストテキストテキスト
-                span.news__dd-date 2022.08.02
+              a(href="#" class="news__box")
+                dt.news__dt
+                  img(src="../img/top_news_2.jpg", alt="")
+                dd.news__dd
+                  span.news__dd-text テキストテキストテキストテキストテキストテキスト
+                  span.news__dd-date 2022.08.02
             dl.news__dl
-              dt.news__dt
-                img(src="../img/top_news_3.jpg", alt="")
-              dd.news__dd
-                span.news__dd-text テキストテキストテキストテキスト
-                span.news__dd-date 2022.08.03
+              a(href="#" class="news__box")
+                dt.news__dt
+                  img(src="../img/top_news_3.jpg", alt="")
+                dd.news__dd
+                  span.news__dd-text テキストテキストテキストテキストテキストテキスト
+                  span.news__dd-date 2022.08.03
             dl.news__dl
-              dt.news__dt
-                img(src="../img/top_news_1.jpg", alt="")
-              dd.news__dd
-                span.news__dd-text テキストテキストテキストテキスト
-                span.news__dd-date 2022.08.04
+              a(href="#" class="news__box")
+                dt.news__dt
+                  img(src="../img/top_news_1.jpg", alt="")
+                dd.news__dd
+                  span.news__dd-text テキストテキストテキストテキストテキストテキスト
+                  span.news__dd-date 2022.08.04
             dl.news__dl
-              dt.news__dt
-                img(src="../img/top_news_2.jpg", alt="")
-              dd.news__dd
-                span.news__dd-text テキストテキストテキストテキスト
-                span.news__dd-date 2022.08.05
+              a(href="#" class="news__box")
+                dt.news__dt
+                  img(src="../img/top_news_2.jpg", alt="")
+                dd.news__dd
+                  span.news__dd-text テキストテキストテキストテキストテキストテキスト
+                  span.news__dd-date 2022.08.05
             dl.news__dl
-              dt.news__dt
-                img(src="../img/top_news_3.jpg", alt="")
-              dd.news__dd
-                span.news__dd-text テキストテキストテキストテキスト
-                span.news__dd-date 2022.08.06
+              a(href="#" class="news__box")
+                dt.news__dt
+                  img(src="../img/top_news_3.jpg", alt="")
+                dd.news__dd
+                  span.news__dd-text テキストテキストテキストテキストテキストテキスト
+                  span.news__dd-date 2022.08.06
       footer.footer
         <p class="footer__copy">&copy; 2022 BURGER</p>
   <link rel="preconnect" href="https://fonts.googleapis.com">

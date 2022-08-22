@@ -18,10 +18,16 @@ html(lang="ja")
       .header__inner
         nav.header__nav
           ul.header__list
-            - let headerlist = ['TOP', 'CONCEPT', 'MENU', 'NEWS', 'ACCESS']
-              each item in headerlist
-                li.header__list-item
-                  a(href="#" class="header__list-link") #{item}
+            li.header__list-item
+              a(href="#" class="header__list-link") TOP
+            li.header__list-item
+              a(href="#concept" class="header__list-link") CONCEPT
+            li.header__list-item
+              a(href="#" class="header__list-link") MENU
+            li.header__list-item
+              a(href="#" class="header__list-link") NEWS
+            li.header__list-item
+              a(href="#access" class="header__list-link") ACCESS
           ul.header__sns
             - let headersns = ['insta', 'twitter', 'facebook']
               each sns in headersns
@@ -31,7 +37,7 @@ html(lang="ja")
     .content
       main
         .topbg
-        section.concept.wrapper
+        section#concept.concept.wrapper
           h2.concept__sectitle CONCEPT
           .concept__imgbox
             picture
@@ -51,7 +57,7 @@ html(lang="ja")
             - for (var i = 0; i < 3; i++)
               li(class="menu__list-item")
                 a(href="#") 
-                  img(src=`../img/top_menu_${i + 1}.jpg`)
+                  img(src=`../img/menu_${i + 1}.jpg`)
           .box
             a(href="#" class="btn") 全てのメニューを見る
         .bg
@@ -76,7 +82,7 @@ html(lang="ja")
                   span.news__list-text テキストテキスト
           .box
             a(href="" class="btn") 全てのニュースを見る
-        section.access
+        section#access.access
           .access__content.wrapper
             .access__textbox
               h2.access__sectitle ACCESS

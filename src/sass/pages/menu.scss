@@ -1,0 +1,142 @@
+@use "../base/reset";
+@use "../base/mixin" as m;
+@use "../base/variable" as v;
+@use "../layout/header" ;
+@use "../layout/footer";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include m.mq('sp') {
+    font-family: 'Noto Serif JP', serif;
+    background-color: v.$bg;
+    font-size: v.$FontSpText;
+    line-height: 1.6;
+  }
+  @include m.mq('tab') {
+    font-family: 'Noto Serif JP', serif;
+    background-color: v.$bg;
+    font-size: v.$FontTabText;
+    line-height: 1.6;
+  }
+  @include m.mq('pc') {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Serif JP', serif;
+    background-color: v.$bg;
+    font-size: v.$FontPcText;
+    line-height: 1.6;
+  }
+}
+
+.wrapper {
+  @include m.mq('sp') {
+    width: 86%;
+    margin: 0 auto;
+  }
+  @include m.mq('tab') {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @include m.mq('pc') {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.content {
+  @include m.mq('sp') {
+  }
+  @include m.mq('tab') {
+  }
+  @include m.mq('pc') {
+    width: 80%;
+    margin-left: auto;
+  }
+}
+
+.topbg {
+  @include m.mq('sp') {
+    background-image: url(/src/img/menu_main_sp.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 100px;
+  }
+  @include m.mq('tab') {
+    background-image: url(/src/img/menu_main.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    margin-bottom: 100px;
+  }
+  @include m.mq('pc') {
+    background-image: url(/src/img/menu_main.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    margin-bottom: 100px;
+  }
+}
+
+.menu {
+  @include m.mq('sp') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Spsectitle;
+    }
+    &__list {
+      &-item {
+        width: 100%;
+        margin-bottom: 50px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include m.mq('tab') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Spsectitle;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &-item {
+        width: 30%;
+        margin-bottom: 50px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include m.mq('pc') {
+    margin-bottom: 160px;
+    &__sectitle {
+      text-align: center;
+      @include m.Spsectitle;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      &-item {
+        width: 30%;
+        margin-bottom: 50px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

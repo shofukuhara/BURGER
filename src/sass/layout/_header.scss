@@ -88,10 +88,7 @@
       position: relative;
     }
     &__nav {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      padding: 120px 40px 0;
     }
     &__list {
       opacity: 0;
@@ -105,10 +102,11 @@
         list-style-type: none;
         padding: 24px 0;
         width: 100%;
+        border-bottom: 1px solid v.$bl;
       }
       &-link {
         color: v.$bl;
-        font-size: 2rem;
+        font-size: 3rem;
         position: relative;
         &::after {
           content: "";
@@ -118,7 +116,7 @@
           height: 10px;
           transform: rotate(45deg);
           position: absolute;
-          top: 10px;
+          top: 18px;
           left: 130%;
           transition: 0.3s ease;
         }
@@ -239,7 +237,7 @@
     }
     &__nav {
       position: absolute;
-      top: 40%;
+      top: 54%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -253,12 +251,12 @@
       margin-bottom: 40px;
       &-item {
         list-style-type: none;
-        padding: 24px 0;
+        padding: 10px 0;
         width: 100%;
       }
       &-link {
         color: v.$bl;
-        font-size: 2rem;
+        font-size: 5rem;
         position: relative;
         &::after {
           content: "";
@@ -268,7 +266,7 @@
           height: 10px;
           transform: rotate(45deg);
           position: absolute;
-          top: 10px;
+          top: 32px;
           left: 130%;
           transition: 0.3s ease;
         }
@@ -285,7 +283,7 @@
       gap:30px;
       &-item {
         img {
-          width: 40px;
+          width: 60px;
           transition: 0.3s ease;
         }
         &:hover {
@@ -309,14 +307,16 @@
     height: 100vh;
     background-color: v.$bg;
     &__logo {
+      width: 100%;
       text-align: center;
       img {
-        width: 230px;
+        width: 100%;
         margin-bottom: 60px;
       }
     }
     &__list {
-      padding-left: 20px;
+      width: 80%;
+      margin: 0 auto;
       &-item {
         margin-bottom: 40px;
         &:last-child {
@@ -353,10 +353,12 @@
       }
     }
     &__sns {
+      width: 80%;
       display: flex;
+      justify-content: center;
       align-items: center;
+      margin: 0 auto;
       gap:30px;
-      padding-left: 20px;
       &-item {
         img {
           width: 40px;

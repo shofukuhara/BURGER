@@ -18,10 +18,16 @@ html(lang="ja")
       .header__inner
         nav.header__nav
           ul.header__list
-            - let headerlist = ['TOP', 'CONCEPT', 'MENU', 'NEWS', 'ACCESS']
-              each item in headerlist
-                li.header__list-item
-                  a(href="#" class="header__list-link") #{item}
+            li.header__list-item
+              a(href="#" class="header__list-link") TOP
+            li.header__list-item
+              a(href="#concept" class="header__list-link") CONCEPT
+            li.header__list-item
+              a(href="#" class="header__list-link") MENU
+            li.header__list-item
+              a(href="#" class="header__list-link") NEWS
+            li.header__list-item
+              a(href="#access" class="header__list-link") ACCESS
           ul.header__sns
             - let headersns = ['insta', 'twitter', 'facebook']
               each sns in headersns

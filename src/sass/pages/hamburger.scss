@@ -41,7 +41,7 @@ body {
     margin: 0 auto;
   }
   @include m.mq('pc') {
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;
   }
 }
@@ -64,7 +64,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
   }
   @include m.mq('tab') {
     background-image: url(/src/img/hamburger_main.png);
@@ -72,7 +72,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 70vh;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
   }
   @include m.mq('pc') {
     background-image: url(/src/img/hamburger_main.png);
@@ -80,7 +80,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 70vh;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
   }
 }
 

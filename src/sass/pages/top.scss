@@ -41,7 +41,7 @@ body {
     margin: 0 auto;
   }
   @include m.mq('pc') {
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;
   }
 }
@@ -117,7 +117,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-bottom: 120px;
   }
   @include m.mq('tab') {
     background-image: url(/src/img/top_main.png);
@@ -125,7 +124,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-bottom: 160px;
   }
   @include m.mq('pc') {
     background-image: url(/src/img/top_main.png);
@@ -133,13 +131,13 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-bottom: 160px;
   }
 }
 
 .concept {
   @include m.mq('sp') {
     margin-bottom: 120px;
+    padding-top: 100px;
     &__sectitle {
       text-align: center;
       @include m.Spsectitle;
@@ -158,6 +156,7 @@ body {
   }
   @include m.mq('tab') {
     margin-bottom: 160px;
+    padding-top: 100px;
     &__sectitle {
       text-align: center;
       @include m.Tabsectitle;
@@ -177,6 +176,7 @@ body {
   }
   @include m.mq('pc') {
     margin-bottom: 160px;
+    padding-top: 100px;
     &__sectitle {
       text-align: center;
       @include m.Pcsectitle;
