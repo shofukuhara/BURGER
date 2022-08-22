@@ -133,8 +133,13 @@ body {
       &-item {
         width: 30%;
         margin-bottom: 50px;
+        transition: 0.5s ease;
         img {
           width: 100%;
+          &:hover {
+            opacity: 0.8;
+            transition: 0.5s ease;
+          }
         }
       }
     }

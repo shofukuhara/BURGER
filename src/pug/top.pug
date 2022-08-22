@@ -55,8 +55,8 @@ html(lang="ja")
           h2.menu__sectitle MENU
           ul.menu__list
             - for (var i = 0; i < 3; i++)
-              li(class="menu__list-item")
-                a(href="#") 
+              li.menu__list-item
+                a(href="#" class="menu__list-link") 
                   img(src=`../img/menu_${i + 1}.jpg`)
           .box
             a(href="#" class="btn") 全てのメニューを見る

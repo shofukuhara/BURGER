@@ -539,6 +539,11 @@ html {
     border-radius: 40px;
     background: #8D1C22;
     color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  }
+  .box .btn:hover {
+    box-shadow: none;
+    transform: scale(0.99, 0.99) translateY(2px);
   }
 }
 
@@ -703,8 +708,13 @@ html {
     width: 33%;
     text-align: center;
   }
-  .menu__list-item img {
+  .menu__list-link img {
     width: 90%;
+    transition: 0.5s ease;
+  }
+  .menu__list-link img:hover {
+    opacity: 0.8;
+    transition: 0.5s ease;
   }
 }
 
@@ -831,9 +841,14 @@ html {
   }
   .news__list-item {
     width: 30%;
+    transition: 0.5s ease;
   }
   .news__list-item img {
     width: 100%;
+  }
+  .news__list-item:hover {
+    opacity: 0.8;
+    transition: 0.5s ease;
   }
   .news__list-date {
     display: block;

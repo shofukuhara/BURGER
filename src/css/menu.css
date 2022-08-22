@@ -571,9 +571,14 @@ html {
   .menu__list-item {
     width: 30%;
     margin-bottom: 50px;
+    transition: 0.5s ease;
   }
   .menu__list-item img {
     width: 100%;
+  }
+  .menu__list-item img:hover {
+    opacity: 0.8;
+    transition: 0.5s ease;
   }
 }
 /*# sourceMappingURL=menu.css.map */

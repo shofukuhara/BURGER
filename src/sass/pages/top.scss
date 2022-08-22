@@ -94,6 +94,11 @@ body {
       border-radius: 40px;
       background: v.$red;
       color: v.$wh;
+      box-shadow: 0 3px 5px rgb(0 0 0 / 50%);
+      &:hover {
+        box-shadow: none;
+        transform: scale(0.99, 0.99) translateY(2px);
+      }
     }
   }
 }
@@ -249,8 +254,15 @@ body {
       &-item {
         width: 33%;
         text-align: center;
+      }
+      &-link {
         img {
           width: 90%;
+          transition: 0.5s ease;
+          &:hover {
+            opacity: 0.8;
+            transition: 0.5s ease;
+          }
         }
       }
     }
@@ -368,8 +380,13 @@ body {
       margin-bottom: 80px;
       &-item {
         width: 30%;
+        transition: 0.5s ease;
         img {
           width: 100%;
+        }
+        &:hover {
+          opacity: 0.8;
+          transition: 0.5s ease;
         }
       }
       &-date {
