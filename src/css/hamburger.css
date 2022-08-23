@@ -486,7 +486,7 @@ html {
 
 @media screen and (max-width: 599px) {
   .topbg {
-    background-image: url(/src/img/hamburger_main_sp.png);
+    background-image: url(../img/hamburger_main_sp.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -496,7 +496,7 @@ html {
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .topbg {
-    background-image: url(/src/img/hamburger_main.png);
+    background-image: url(../img/hamburger_main.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -506,7 +506,7 @@ html {
 }
 @media screen and (min-width: 1025px) {
   .topbg {
-    background-image: url(/src/img/hamburger_main.png);
+    background-image: url(../img/hamburger_main.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

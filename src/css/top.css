@@ -556,7 +556,7 @@ html {
 
 @media screen and (max-width: 599px) {
   .topbg {
-    background-image: url(/src/img/top_main_sp.png);
+    background-image: url(../img/top_main_sp.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -565,7 +565,7 @@ html {
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .topbg {
-    background-image: url(/src/img/top_main.png);
+    background-image: url(../img/top_main.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -574,7 +574,7 @@ html {
 }
 @media screen and (min-width: 1025px) {
   .topbg {
-    background-image: url(/src/img/top_main.png);
+    background-image: url(../img/top_main.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -720,7 +720,7 @@ html {
 
 @media screen and (max-width: 599px) {
   .bg {
-    background-image: url(/src/img/top_bg_sp.png);
+    background-image: url(../img/top_bg_sp.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -731,7 +731,7 @@ html {
 }
 @media screen and (min-width: 600px) and (max-width: 1024px) {
   .bg {
-    background-image: url(/src/img/top_bg.png);
+    background-image: url(../img/top_bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -742,7 +742,7 @@ html {
 }
 @media screen and (min-width: 1025px) {
   .bg {
-    background-image: url(/src/img/top_bg.png);
+    background-image: url(../img/top_bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

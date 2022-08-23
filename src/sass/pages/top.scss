@@ -117,21 +117,21 @@ body {
 }
 .topbg {
   @include m.mq('sp') {
-    background-image: url(/src/img/top_main_sp.png);
+    background-image: url(../img/top_main_sp.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
   }
   @include m.mq('tab') {
-    background-image: url(/src/img/top_main.png);
+    background-image: url(../img/top_main.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
   }
   @include m.mq('pc') {
-    background-image: url(/src/img/top_main.png);
+    background-image: url(../img/top_main.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -271,7 +271,7 @@ body {
 
 .bg {
   @include m.mq('sp') {
-    background-image: url(/src/img/top_bg_sp.png);
+    background-image: url(../img/top_bg_sp.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -280,7 +280,7 @@ body {
     background-attachment: fixed;
   }
   @include m.mq('tab') {
-    background-image: url(/src/img/top_bg.png);
+    background-image: url(../img/top_bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -289,7 +289,7 @@ body {
     background-attachment: fixed;
   }
   @include m.mq('pc') {
-    background-image: url(/src/img/top_bg.png);
+    background-image: url(../img/top_bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
